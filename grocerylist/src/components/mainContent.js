@@ -4,6 +4,8 @@ import {GrocerySection} from './addGrocery';
 export function Grocery() {
 const API_BASE_URL = "https://vast-castle-96324.herokuapp.com";
 const [groceryItems, updateGroceryItems] = useState([]);
+
+
 async function fetchGroceryItmes(){
   const groceryData = await axios.get(`${API_BASE_URL}/grocery/getAll`);
   console.log(groceryData.data);
@@ -48,7 +50,7 @@ function renderItems(){
      <button className="btn btn-warning btn1"
      onClick={() =>handlepurchaseUpdate(item)}
       >
-      Mark isPurchased
+      Mark Purchased
     </button>
      ) :null
      }
@@ -60,11 +62,19 @@ function renderItems(){
 
     </div>
   });
+  
+ 
 }
+const date = new Date();
+const monthNumber = date.getMonth();
+const monthArray = ['January', 'Fedruary', 'March', 'April', 'May', 'June', 'july', 'August', 'September', 'October', 'November', 'December'];
+const monthdata = monthArray[monthNumber];
+
+
   return (
     <div className="bodyContent">
       <p className="month-text">
-        <b>Plan for the month of Fabruary</b>
+        <b>Plan for the month of {monthdata}</b>
       </p>
       <div >
         <GrocerySection 
