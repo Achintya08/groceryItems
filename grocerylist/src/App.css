@@ -1,0 +1,35 @@
+body {
+  
+  background:#6DA5F2 ;
+  
+}
+.App{
+  margin-bottom: 20px;
+}
+.bodyContent{
+ margin-top: 20%;
+ padding-left: 25%;
+ padding-right: 25%;
+}
+
+.month-text{
+ font-size: 30px;
+ text-align: center;
+}
+
+.list-itmes{
+  background: rgb(229, 222, 207);
+  border-radius: 2px;
+  padding: 20px;
+  min-height:auto;
+
+}
+
+
+
+.btn1{
+  float: right !important;
+  
+}
+
+
